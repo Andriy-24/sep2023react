@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {userService} from "../../../services/userService";
 import {User} from "../User/User";
 import {UserDetails} from "../UserDetails/UserDetails";
-
+import css from "./Users.module.css"
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [userDetails, setUserDetails] = useState(null);
@@ -15,7 +15,7 @@ const Users = () => {
         setUserDetails(user);
     }
     return (
-        <div>
+        <div className={css.Users}>
             <div>
                 {users.map(user => <User key={user.id} user={user} getCurrentUser={getCurrentUser}/>)}
                 <hr/>
