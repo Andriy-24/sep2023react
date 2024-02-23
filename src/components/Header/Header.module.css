@@ -1,0 +1,6 @@
+.Header{
+    background: skyblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
